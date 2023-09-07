@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    form {
+      border: 3px solid #f1f1f1;
+    }
+
+    .topHead {
+      display: inline-block;
+      justify-content: center;
+      width: 97%;
+      height: 130px;
+      background-color: rgb(37, 92, 211);
+      box-shadow: 0px 2px 2px 1px rgba(128, 128, 128, 0.549);
+      margin-bottom: 50px;
+      color: white;
+      font-size: 45px;
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .topIn {
+      padding-top: 10px;
+      display: flex;
+      font-size: 25px;
+      height: 70px;
+      justify-content: left;
+      align-items: center;
+    }
+
+    #nameP {
+      margin-right: 120px;
+      font-size: 28px;
+    }
+
+    input[type=text] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+/*    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }*/
+
+    button{
+    border: none;
+    background: #064789;
+    width: 100%;
+    min-width: 80%;
+    height: 10%;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+    color: white;cursor: pointer;
+    box-shadow: 1px 1px 5px 2px #437eb9cc;
+    font-size: 16px;
+}
+
+  .button:hover{
+    background-color: rgba(158,158,158, 0.20);
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+  }
+
+ 
+
+/*
+    button:hover {
+      opacity: 0.8;
+    }*/
+
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #f44336;
+    }
+
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+    }
+
+    img.avatar {
+      width: 20%;
+      border-radius: 50%;
+    }
+
+    .container {
+      padding: 16px;
+    }
+
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+        display: block;
+        float: none;
+      }
+
+      .cancelbtn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <form id="form_pred" class="contact100-form validate-form" method="post" action="/api">
+    <div class="topHead">
+      FAKE NEWS DETECTOR
+      <div class="topIn">
+        <p id="nameP">Credits:</p>
+        <p id="nameP">Dishesh Singh Chaudhary</p>
+        <p id="nameP">Rishabha Sharma</p>
+        <p id="nameP">Rishi Parsai</p>
+      </div>
+    </div>
+    <div class="imgcontainer">
+      <img src="/static/OIP.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="title"><b>Title</b></label>
+      <input type="text" placeholder="Enter Title" name="title" required>
+
+      <label for="author"><b>Author</b></label>
+      <input type="text" placeholder="Enter Author" name="author" required>
+
+      <label for="maintext"><b>Text</b></label>
+      <input type="text" placeholder="Enter Whole Text" name="maintext" required>
+
+      <button type="submit">
+        <p id="btnP">Predict</p>
+      </button>
+    </div>
+
+  </form>
+
+</body>
+
+</html>
